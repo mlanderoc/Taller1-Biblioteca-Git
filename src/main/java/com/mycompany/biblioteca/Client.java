@@ -2,10 +2,10 @@
 package com.mycompany.biblioteca;
 
 
-public class Cliente extends Persona{
+public class Client extends Person{
     private  String email;
     
-    public Cliente(String email, String name, String id, String phoneNumber) {
+    public Client(String email, String name, String id, String phoneNumber) {
         super(name, id, phoneNumber);
         this.email = email;
     }

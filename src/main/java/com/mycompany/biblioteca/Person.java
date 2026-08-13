@@ -1,12 +1,12 @@
 
 package com.mycompany.biblioteca;
 
-public class Persona {
+public class Person {
    private String name;
    private String id; 
    private String phoneNumber;
 
-    public Persona(String name, String id, String phoneNumber) {
+    public Person(String name, String id, String phoneNumber) {
         this.name = name;
         this.id = id;
         this.phoneNumber = phoneNumber;
