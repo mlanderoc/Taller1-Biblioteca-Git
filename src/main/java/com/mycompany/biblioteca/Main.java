@@ -38,4 +38,10 @@ public class Main {
     void findBook(){
         
     }
+    void updateBook(){
+        
+    }
+    void deleteBook(){
+        
+    }
 }
