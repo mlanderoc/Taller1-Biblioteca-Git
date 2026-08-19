@@ -32,4 +32,7 @@ public class Main {
     void createBook(){
         
     }
+    void readBook(){
+        
+    }
 }
