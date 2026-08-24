@@ -14,8 +14,35 @@ public class Main {
     }
     
     //Methods
-    void createClient(){
-        
+    static void createClient() {
+
+        try {
+            System.out.print("Enter ID: ");
+            String id = sc.nextLine();
+            
+            System.out.print("Enter name: ");
+            String name = sc.nextLine();
+
+            System.out.print("Enter phone number: ");
+            String phoneNumber = sc.nextLine();
+
+            System.out.print("Enter email: ");
+            String email = sc.nextLine();
+
+            if (id.isBlank()) {
+                throw new IllegalArgumentException("ID no puede estar vacio.");
+            }
+
+            Client client = new Client(email, name, id, phoneNumber);
+
+            clients.add(client);
+
+            System.out.println("Cliente creado");
+
+        } catch (IllegalArgumentException e) {
+
+            System.out.println("Error: " + e.getMessage());
+        }
     }
     void readClient(){
         
