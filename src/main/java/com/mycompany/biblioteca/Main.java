@@ -14,7 +14,7 @@ public class Main {
     }
     
     //Methods
-    static void createClient() {
+    void createClient() {
 
         try {
             System.out.print("Enter ID: ");
@@ -37,7 +37,7 @@ public class Main {
 
             clients.add(client);
 
-            System.out.println("Cliente creado");
+            System.out.println("Cliente registrado");
 
         } catch (IllegalArgumentException e) {
 
@@ -56,9 +56,39 @@ public class Main {
     void deleteClient(){
         
     }
-    void createBook(){
-        
+    //----------------------------------------------------
+    void createBook() {
+    try {
+        System.out.print("Enter book code : ");
+        String code = sc.nextLine();
+
+        System.out.print("Enter title : ");
+        String title = sc.nextLine();
+
+        System.out.print("Enter author: ");
+        String author = sc.nextLine();
+
+        System.out.print("Enter publicDate: ");
+        String publicDate = sc.nextLine();
+
+        System.out.print("Is the book available? (S/N): ");
+        String resp = sc.nextLine().trim().toUpperCase();
+        boolean available = resp.equals("S");
+
+        if (code.isBlank()) {
+            throw new IllegalArgumentException("code no puede estar vacio.");
+        }
+
+        Book book = new Book(author, available, code, title, publicDate);
+        books.add(book);
+
+        System.out.println("Libro guardado correctamente");
+
+    } catch (IllegalArgumentException e) {
+        System.out.println("Error: " + e.getMessage());
     }
+}
+
     void readBook(){
         
     }
